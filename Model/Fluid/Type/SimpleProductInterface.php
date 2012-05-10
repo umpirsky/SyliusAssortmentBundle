@@ -11,20 +11,13 @@
 
 namespace Sylius\Bundle\AssortmentBundle\Model\Fluid\Type;
 
-use Sylius\Bundle\AssortmentBundle\Model\Fluid\FluidProduct;
+use Sylius\Bundle\AssortmentBundle\Model\Fluid\FluidProductInterface;
 
 /**
  * Simple product type.
  *
  * @author Paweł Jędrzejewski <pjedrzejewski@diweb.pl>
  */
-class SimpleProduct extends FluidProduct
+class SimpleProductInterface extends FluidProductInterface
 {
-    /**
-     * Constructor.
-     */
-    public function __construct()
-    {
-        $this->type = FluidProductInterface::TYPE_SIMPLE;
-    }
 }
