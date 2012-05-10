@@ -21,4 +21,3 @@ use Sylius\Bundle\AssortmentBundle\Model\Fluid\Variant as BaseVariant;
 class Variant extends BaseVariant
 {
 }
-
