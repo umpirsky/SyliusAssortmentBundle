@@ -34,6 +34,9 @@
 
         <service id="sylius.form.type.option" class="%sylius.form.type.option.class%">
             <argument>%sylius.model.option.class%</argument>
+            <argument type="collection">
+                <argument>sylius</argument>
+            </argument>
             <tag name="form.type" alias="sylius_option" />
         </service>
         <service id="sylius.form.type.option_choice" class="%sylius.form.type.option_choice.class%">
@@ -43,6 +46,9 @@
 
         <service id="sylius.form.type.option_value" class="%sylius.form.type.option_value.class%">
             <argument>%sylius.model.option_value.class%</argument>
+            <argument type="collection">
+                <argument>sylius</argument>
+            </argument>
             <tag name="form.type" alias="sylius_option_value" />
         </service>
         <service id="sylius.form.type.option_value_choice" class="%sylius.form.type.option_value_choice.class%">

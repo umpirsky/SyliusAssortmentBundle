@@ -20,21 +20,25 @@
         <property name="name">
             <constraint name="NotBlank">
                 <option name="message">sylius.product.name.not_blank</option>
+                <option name="groups">sylius</option>
             </constraint>
             <constraint name="Length">
                 <option name="min">2</option>
                 <option name="minMessage">sylius.product.name.min_length</option>
                 <option name="max">255</option>
                 <option name="maxMessage">sylius.product.name.max_length</option>
+                <option name="groups">sylius</option>
             </constraint>
         </property>
         <property name="description">
             <constraint name="NotBlank">
                 <option name="message">sylius.product.description.not_blank</option>
+                <option name="groups">sylius</option>
             </constraint>
             <constraint name="Length">
                 <option name="min">3</option>
                 <option name="minMessage">sylius.product.description.min_length</option>
+                <option name="groups">sylius</option>
             </constraint>
         </property>
     </class>
@@ -52,30 +56,36 @@
     </class>
 
     <class name="Sylius\Bundle\AssortmentBundle\Model\Variant\Variant">
-        <constraint name="Sylius\Bundle\AssortmentBundle\Validator\Constraint\VariantCombination" />
+        <constraint name="Sylius\Bundle\AssortmentBundle\Validator\Constraint\VariantCombination">
+            <option name="groups">sylius</option>
+        </constraint>
     </class>
 
     <class name="Sylius\Bundle\AssortmentBundle\Model\Option\Option">
         <property name="name">
             <constraint name="NotBlank">
                 <option name="message">sylius.option.name.not_blank</option>
+                <option name="groups">sylius</option>
             </constraint>
             <constraint name="Length">
                 <option name="min">2</option>
                 <option name="minMessage">sylius.option.name.min_length</option>
                 <option name="max">255</option>
                 <option name="maxMessage">sylius.option.name.max_length</option>
+                <option name="groups">sylius</option>
             </constraint>
         </property>
         <property name="presentation">
             <constraint name="NotBlank">
                 <option name="message">sylius.option.presentation.not_blank</option>
+                <option name="groups">sylius</option>
             </constraint>
             <constraint name="Length">
                 <option name="min">2</option>
                 <option name="minMessage">sylius.option.presentation.min_length</option>
                 <option name="max">255</option>
                 <option name="maxMessage">sylius.option.presentation.max_length</option>
+                <option name="groups">sylius</option>
             </constraint>
         </property>
         <property name="values">
@@ -83,6 +93,7 @@
             <constraint name="Count">
                 <option name="min">2</option>
                 <option name="minMessage">sylius.option.values.min_count</option>
+                <option name="groups">sylius</option>
             </constraint>
         </property>
     </class>
@@ -91,6 +102,7 @@
         <property name="value">
             <constraint name="NotBlank">
                 <option name="message">sylius.option_value.value.not_blank</option>
+                <option name="groups">sylius</option>
             </constraint>
         </property>
     </class>
@@ -99,23 +111,27 @@
         <property name="name">
             <constraint name="NotBlank">
                 <option name="message">sylius.property.name.not_blank</option>
+                <option name="groups">sylius</option>
             </constraint>
             <constraint name="Length">
                 <option name="min">2</option>
                 <option name="minMessage">sylius.property.name.min_length</option>
                 <option name="max">255</option>
                 <option name="maxMessage">sylius.property.name.max_length</option>
+                <option name="groups">sylius</option>
             </constraint>
         </property>
         <property name="presentation">
             <constraint name="NotBlank">
                 <option name="message">sylius.property.presentation.not_blank</option>
+                <option name="groups">sylius</option>
             </constraint>
             <constraint name="Length">
                 <option name="min">2</option>
                 <option name="minMessage">sylius.property.presentation.min_length</option>
                 <option name="max">255</option>
                 <option name="maxMessage">sylius.property.presentation.max_length</option>
+                <option name="groups">sylius</option>
             </constraint>
         </property>
     </class>
@@ -124,11 +140,13 @@
         <property name="property">
             <constraint name="NotBlank">
                 <option name="message">sylius.product_property.property.not_blank</option>
+                <option name="groups">sylius</option>
             </constraint>
         </property>
         <property name="value">
             <constraint name="NotBlank">
                 <option name="message">sylius.product_property.value.not_blank</option>
+                <option name="groups">sylius</option>
             </constraint>
         </property>
     </class>
@@ -137,12 +155,14 @@
         <property name="name">
             <constraint name="NotBlank">
                 <option name="message">sylius.prototype.name.not_blank</option>
+                <option name="groups">sylius</option>
             </constraint>
             <constraint name="Length">
                 <option name="min">2</option>
                 <option name="minMessage">sylius.prototype.name.min_length</option>
                 <option name="max">255</option>
                 <option name="maxMessage">sylius.prototype.name.max_length</option>
+                <option name="groups">sylius</option>
             </constraint>
         </property>
     </class>

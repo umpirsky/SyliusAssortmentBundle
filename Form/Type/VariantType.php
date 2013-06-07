@@ -31,6 +31,13 @@ class VariantType extends AbstractType
     protected $dataClass;
 
     /**
+     * Validation groups.
+     *
+     * @var string
+     */
+    protected $validationGroups;
+
+    /**
      * Constructor.
      *
      * It's important to set the data class that was configured inside 'config.yml'.
@@ -38,10 +45,12 @@ class VariantType extends AbstractType
      * remember to pass '%sylius.model.variant.class%' as an argument inside service definition.
      *
      * @param string $dataClass FQCN of the product variant model
+     * @param array  $validationGroups validation groups
      */
-    public function __construct($dataClass)
+    public function __construct($dataClass, array $validationGroups = null)
     {
         $this->dataClass = $dataClass;
+        $this->validationGroups = $validationGroups;
     }
 
     /**
@@ -74,8 +83,9 @@ class VariantType extends AbstractType
     {
         $resolver
             ->setDefaults(array(
-                'data_class' => $this->dataClass,
-                'master'     => false
+                'data_class'        => $this->dataClass,
+                'validation_groups' => $this->validationGroups,
+                'master'            => false,
             ))
         ;
     }

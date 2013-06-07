@@ -32,6 +32,9 @@
 
         <service id="sylius.form.type.prototype" class="%sylius.form.type.prototype.class%">
             <argument>%sylius.model.prototype.class%</argument>
+            <argument type="collection">
+                <argument>sylius</argument>
+            </argument>
             <tag name="form.type" alias="sylius_prototype" />
         </service>
 

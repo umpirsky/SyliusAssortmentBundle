@@ -30,17 +30,26 @@ class ProductType extends AbstractType
     protected $dataClass;
 
     /**
+     * Validation groups.
+     *
+     * @var string
+     */
+    protected $validationGroups;
+
+    /**
      * Constructor.
      *
      * It's important to set the data class that was configured inside 'config.yml'.
      * This will be done automatically when using this class, but if you would like to extend it,
      * remember to pass '%sylius.model.product.class%' as an argument inside service definition.
      *
-     * @param string $dataClass FQCN of the product model
+     * @param string $dataClass        FQCN of the product model
+     * @param array  $validationGroups validation groups
      */
-    public function __construct($dataClass)
+    public function __construct($dataClass, array $validationGroups = null)
     {
         $this->dataClass = $dataClass;
+        $this->validationGroups = $validationGroups;
     }
 
     /**
@@ -79,7 +88,8 @@ class ProductType extends AbstractType
     {
         $resolver
             ->setDefaults(array(
-                'data_class' => $this->dataClass
+                'data_class'        => $this->dataClass,
+                'validation_groups' => $this->validationGroups,
             ))
         ;
     }
